@@ -8,21 +8,21 @@ import java.io.*
 
 class MainActivity : AppCompatActivity() {
 
-    // Nombre del archivo donde se guardará todo
+
     private val NOMBRE_ARCHIVO = "precios_combustible.txt"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Referencias a los componentes del XML
+
         val etPrecio = findViewById<EditText>(R.id.etPrecio)
         val rgTipo = findViewById<RadioGroup>(R.id.rgTipo)
         val btnGuardar = findViewById<Button>(R.id.btnGuardar)
         val btnVer = findViewById<Button>(R.id.btnVer)
         val tvSalida = findViewById<TextView>(R.id.tvSalida)
 
-        // --- LÓGICA PARA GUARDAR ---
+
         btnGuardar.setOnClickListener {
             val precio = etPrecio.text.toString()
             val idSeleccionado = rgTipo.checkedRadioButtonId
@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // --- LÓGICA PARA LEER EL HISTORIAL ---
+
         btnVer.setOnClickListener {
             try {
                 val fis = openFileInput(NOMBRE_ARCHIVO)
