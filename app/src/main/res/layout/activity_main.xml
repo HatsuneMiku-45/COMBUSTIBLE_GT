@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Combustible GT"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Campo para ingresar el precio -->
+        <EditText
+            android:id="@+id/etPrecio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Precio por galón (Q)"
+            android:inputType="numberDecimal"
+            android:padding="12dp"/>
+
+        <!-- Selección del tipo de combustible -->
+        <RadioGroup
+            android:id="@+id/rgTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp">
+
+            <RadioButton
+                android:id="@+id/rbRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Regular" />
+
+            <RadioButton
+                android:id="@+id/rbSuper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Super" />
+
+            <RadioButton
+                android:id="@+id/rbDiesel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diesel" />
+        </RadioGroup>
+
+        <!-- Botones de acción -->
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrar Precio"
+            android:backgroundTint="#1976D2"/>
+
+        <Button
+            android:id="@+id/btnVer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ver Historial"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#455A64"/>
+
+        <!-- Área donde se mostrará el historial -->
+        <TextView
+            android:id="@+id/tvSalida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Los datos aparecerán aquí..."
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>
